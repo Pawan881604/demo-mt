@@ -1,0 +1,668 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+<link href="../../../../css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+
+<link rel="stylesheet" href="assets/plugins/datetimepicker/css/tempusdominus-bootstrap-4.min.css">
+
+<link rel="stylesheet" href="assets/css/select2.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<div class="main-wrapper">
+
+<div class="header-outer">
+<div class="header">
+<a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fas fa-bars" aria-hidden="true"></i></a>
+<a id="toggle_btn" class="float-left" href="javascript:void(0);">
+<img src="assets/img/sidebar/icon-21.png" alt="">
+</a>
+
+<ul class="nav float-left">
+<li>
+<div class="top-nav-search">
+<a href="javascript:void(0);" class="responsive-search">
+<i class="fa fa-search"></i>
+</a>
+<form action="search.html">
+<input class="form-control" type="text" placeholder="Search here">
+<button class="btn" type="submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+</li>
+</ul>
+
+<ul class="nav user-menu float-right">
+
+<li class="nav-item dropdown has-arrow">
+<a href="#" class=" nav-link user-link" data-toggle="dropdown">
+<span class="user-img"><img class="rounded-circle" src="assets/img/user-06.jpg" width="30" alt="Admin">
+ <span class="status online"></span></span>
+<span>Admin</span>
+</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="profile.html">My Profile</a>
+<a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+<a class="dropdown-item" href="settings.html">Settings</a>
+<a class="dropdown-item" href="login.html">Logout</a>
+</div>
+</li>
+</ul>
+<div class="dropdown mobile-user-menu float-right"> 
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="profile.html">My Profile</a>
+<a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+<a class="dropdown-item" href="settings.html">Settings</a>
+<a class="dropdown-item" href="login.html">Logout</a>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="sidebar" id="sidebar">
+<div class="sidebar-inner slimscroll">
+<div id="sidebar-menu" class="sidebar-menu">
+<div class="header-left">
+<a href="index.html" class="logo">
+<img src="assets/img/logo1.png" width="40" height="40" alt="">
+<span class="text-uppercase">Tms</span>
+</a>
+</div>
+<ul class="sidebar-ul">
+<li class="menu-title">Menu</li>
+<li class="active"><a href="index.html"><img src="assets/img/sidebar/icon-1.png" alt="icon"><span>Dashboard</span></a></li>
+<li><a href="firm-list.html"><img src="assets/img/sidebar/icon-7.png" alt="icon"> <span>Firm Creation</span></a></li>
+<li class="submenu">
+<a href="#"><img src="assets/img/sidebar/icon-4.png" alt="icon"> <span> Administration</span> <span class="menu-arrow"></span></a>
+<ul class="list-unstyled" style="display: none;">
+<li><a href="maingroupmaster.html"><span>Main Group</span></a></li>
+<li><a href="subgroupmaster.html"><span>Sub Group</span></a></li>
+<li><a href="ledgermaster.html"><span>Ledger Master</span></a></li>
+<li><a href="incomemaster.html"><span>Income</span></a></li>
+<li><a href="expensemaster.html"><span>Expense</span></a></li>
+<li><a href="productgroupmaster.html"><span>Product Group</span></a></li>
+<li><a href="productmaster.html"><span>Product Master</span></a></li>
+<li><a href="statemaster.html"><span>State Master</span></a></li>
+<li><a href="citymaster.html"><span>City Master</span></a></li>
+<li><a href="vehiclemaster.html"><span>Vehicle Master</span></a></li>
+<li><a href="unitmaster.html"><span>Unit Master</span></a></li>
+<li><a href="ratemaster.html"><span>Rate Master</span></a></li>
+<li><a href="documentmaster.html"><span>Document Master</span></a></li>
+<li><a href="documenrregistrationmaster.html"><span>Document Reg</span></a></li>
+<li><a href="jobheadmaster.html"><span>Job Head</span></a></li>
+<li><a href="jobinfomaster.html"><span>Job Info</span></a></li>
+<li><a href="jobentrymaster.html"><span>Job Entry</span></a></li>
+<li><a href="openingstockmaster.html"><span>Opening Stock</span></a></li>
+<li><a href="tyreinstallationmaster.html"><span>Tyre Ins.</span></a></li>
+<li><a href="tyrescarpmaster.html"><span>Tyre Scrap</span></a></li>
+<li><a href="purchasemaster.html"><span>Purchase Master</span></a></li>
+</ul>
+</li>
+<li class="submenu">
+<a href="javascript:void(0);"><img src="assets/img/sidebar/icon-5.png" alt="icon"> <span>Transation</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="lrlist.html"> LR Entry </a></li>
+<li class="submenu"><a href="javascript:void(0);"><span>Full Truck</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="challanentryfulltruck.html"><span>Challan Entry</span></a></li>
+<li><a href="billingfulltruck.html"> <span> Billing</span> </a></li>
+</ul>
+</li>
+<li class="submenu"><a href="javascript:void(0);"><span>Part Truck</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="lodingchallanparttruck.html"><span>Loading Challan</span></a></li>
+<li><a href="unloadingparttruck.html"> <span> Unloading</span></a></li>
+<li><a href="cashmemoparttruck.html"> <span> Cash Memo</span></a></li>
+<li><a href="gatepassparttruck.html"> <span> Gate Pass</span></a></li>
+<li><a href="outwardcrossingparttruck.html"> <span> Outward Crossing</span></a></li>
+<li><a href="crossingchallanparttruck.html"> <span> Crossing Challan</span></a></li>
+<li><a href="hireslipparttruck.html"> <span> Hire Slip</span></a></li>
+<li><a href="summaryentryparttruck.html"> <span> Summary Entry</span></a></li>
+<li><a href="billingparttruck.html"> <span> Billing</span></a></li>
+</ul>
+</li>
+<li><a href="receipt.html"> Receipt </a></li>
+<li><a href="payment.html"> Payment </a></li>
+<li><a href="delivery.html"> Delivery </a></li>
+<li><a href="podmodule.html"> POD Module </a></li>
+<li class="submenu"><a href="javascript:void(0);"><span>Broker slip</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="brokerentry.html"><span>Broker Entry</span></a></li>
+<li><a href="brokerbilling.html"> <span> Broker Billing</span></a></li>
+</ul>
+</li>
+<li><a href="stationaryinward.html"> Stationary Inward </a></li>
+<li><a href="stationaryissue.html"> Stationary Issue</a></li>
+<li><a href="cashreceipt.html"> Cash Receipt</a></li>
+<li><a href="shipmentinfo.html"> Shipment Info</a></li>
+</ul>
+</li>
+<li class="submenu">
+<a href="javascript:void(0);"><img src="assets/img/sidebar/icon-5.png" alt="icon"> <span>Report</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="lrregisterreport.html"> LR Register </a></li>
+<li class="submenu"><a href="javascript:void(0);"><span>Full Truck</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="challanreport.html"><span>Challan </span></a></li>
+<li><a href="billingfulltrucktreport.html"> <span> Billing </span> </a></li>
+<li><a href="lrpendingreport.html"> <span> LR Pending</span> </a></li>
+</ul>
+</li>
+<li class="submenu"><a href="javascript:void(0);"><span>Part Truck</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="loadingparttruck.html"><span>Loading </span></a></li>
+<li><a href="stockparttruck.html"> <span> Stock</span></a></li>
+<li><a href="outwardparttruck.html"> <span> Outward</span></a></li>
+<li><a href="cashmemoparttruck.html"> <span> Cash Memo</span></a></li>
+<li><a href="crossingparttruck.html"> <span> Crossing</span></a></li>
+<li><a href="billingparttruck.html"> <span> Billing</span></a></li>
+<li><a href="summaryparttruck.html"> <span> Summary</span></a></li>
+<li><a href="hireslipparttruck.html"> <span> Hire Slip</span></a></li>
+<li><a href="cashpendingparttruck.html"> <span> Cash Pending</span></a></li>
+</ul>
+</li>
+<li class="submenu"><a href="javascript:void(0);"><span>Broker Report</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="brokerentryreport.html"><span>Entry </span></a></li>
+<li><a href="brokerbillingreport.html"> <span> Billing</span></a></li>
+<li><a href="brokeroutstandingreport.html"> <span> OutStanding</span></a></li>
+</ul>
+</li>
+<li><a href="ledgerreport.html"> Ledger </a></li>
+<li><a href="outstandingreport.html"> OutStanding </a></li>
+<li><a href="cashbookreport.html"> Cash Book </a></li>
+<li><a href="bankbookreport.html"> Bank Book </a></li>
+
+<li><a href="paymentreport.html"> Payment </a></li>
+<li><a href="receiptreport.html"> Receipt</a></li>
+<li><a href="costingreport.html"> Costing</a></li>
+<li><a href="profitlossreport.html"> Profit/Loss</a></li>
+</ul>
+</li>
+<li class="submenu">
+<a href="javascript:void(0);"><img src="assets/img/sidebar/icon-5.png" alt="icon"> <span>Permission</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="usermaster.html"> User </a></li>
+<li><a href="rolemaster.html"> Role</a></li>
+<li><a href="permissionmaster.html"> Permission</a></li>
+</ul>
+</li>
+<li class="submenu">
+<a href="javascript:void(0);"><img src="assets/img/sidebar/icon-5.png" alt="icon"> <span>Log Details</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="logdetailsreport.html"> Log Details </a></li>
+</ul>
+</li>
+<li class="submenu">
+<a href="javascript:void(0);"><img src="assets/img/sidebar/icon-5.png" alt="icon"> <span>Utility</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="biltystatus.html"> Bilty Status </a></li>
+<li><a href="tacking.html"> Tracking </a></li>
+<li><a href="calculater.html"> Calculater </a></li>
+<li><a href="updateentryno.html"> Update Entry No. </a></li>
+</ul>
+</li>
+<!------------------------------------------------------------------------------>
+
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="page-wrapper">
+<div class="content container-fluid">
+<div class="page-header">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+<h5 class="text-uppercase mb-0 mt-0 page-title">C Note Genaration</h5>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+<ul class="breadcrumb float-right p-0 mb-0">
+<li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+<li class="breadcrumb-item"><a href="index.html">LR list</a></li>
+<li class="breadcrumb-item"><span> C Note Genaration</span></li>
+</ul>
+</div>
+</div>
+</div>
+<!-----------------------------C Note Genaration--------------------------------------->
+<div class="page-content1">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+<div class="card">
+<div class="card-body">
+<div class="row">
+<!-----------------------------1--------------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<form>
+<div class="form-group">
+<label>C Note No. </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Origin</label>
+<input type="text" class="form-control" disabled>
+</div>
+<div class="form-group">
+<label>PRQ No  </label>
+<input type="password" class="form-control">
+</div>
+<div class="form-group">
+<label>Pickup/Delivery  </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Vendor Code</label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Special Instruction</label>
+<input type="text" class="form-control">
+</div>
+</div>
+<!-------------------------------2------------------------------------>
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>C Note Date</label>
+<input type="password" class="form-control">
+</div>
+<div class="form-group">
+<label>From City </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Product  </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Packing Type   </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Vehicle No</label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Business Type</label>
+<input type="text" class="form-control">
+</div>
+</div>
+<!----------------------------------3--------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>Payment Type</label>
+<input type="password" class="form-control">
+</div>
+<div class="form-group">
+<label>Destination </label>
+<input type="text" class="form-control" disabled>
+</div>
+<div class="form-group">
+<label>Service Type  </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Contents   </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Local C Note</label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Multi Delivery</label>
+<input type="text" class="form-control">
+</div>
+</div>
+<!----------------------------------4--------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>Cotract Party</label>
+<input type="password" class="form-control">
+</div>
+<div class="form-group">
+<label>To City </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Type Of Movement  </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Vendor Type   </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>PO No.</label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Multi Pickup</label>
+<input type="text" class="form-control">
+</div>
+</div>
+<!------------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-----------------------------Consignor Details----------------------------->
+<div class="page-content1">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+<div class="card">
+<div class="card-body">
+<div class="row">
+<!-----------------------------1--------------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>From Master Or Walkin </label>
+<input type="text" class="form-control" disabled>
+</div>
+<div class="form-group">
+<label>Address</label>
+<input type="text" class="form-control" >
+</div>
+<div class="form-group">
+<label>Telephone</label>
+<input type="text" class="form-control" >
+</div>
+</div>
+<!-------------------------------2------------------------------------>
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>Consignor</label>
+<input type="password" class="form-control">
+</div>
+<div class="form-group">
+<label>City </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Email Id</label>
+<input type="text" class="form-control" >
+</div>
+</div>
+<!----------------------------------3--------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>GSTIN No.</label>
+<input type="password" class="form-control">
+</div>
+<div class="form-group">
+<label>Pin Code </label>
+<input type="text" class="form-control" >
+</div>
+</div>
+<!----------------------------------4--------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>From Master Or Walkin</label>
+<input type="password" class="form-control" disabled>
+</div>
+<div class="form-group">
+<label>Mobile No </label>
+<input type="text" class="form-control">
+</div>
+</div>
+<!------------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!------------------------------------Consignee Details------------------------------------------->
+<div class="page-content1">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+<div class="card">
+<div class="card-body">
+<div class="row">
+<!-----------------------------1--------------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>From Master Or Walkin </label>
+<input type="text" class="form-control" disabled>
+</div>
+<div class="form-group">
+<label>Address</label>
+<input type="text" class="form-control" >
+</div>
+<div class="form-group">
+<label>Telephone</label>
+<input type="text" class="form-control" >
+</div>
+</div>
+<!-------------------------------2------------------------------------>
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>Consignee</label>
+<input type="password" class="form-control">
+</div>
+<div class="form-group">
+<label>City </label>
+<input type="text" class="form-control">
+</div>
+<div class="form-group">
+<label>Email Id</label>
+<input type="text" class="form-control" >
+</div>
+</div>
+<!----------------------------------3--------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>GSTIN No.</label>
+<input type="password" class="form-control">
+</div>
+<div class="form-group">
+<label>Pin Code </label>
+<input type="text" class="form-control" >
+</div>
+</div>
+<!----------------------------------4--------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>From Master Or Walkin</label>
+<input type="password" class="form-control" disabled>
+</div>
+<div class="form-group">
+<label>Mobile No </label>
+<input type="text" class="form-control">
+</div>
+</div>
+<!------------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--------------------------------------------------------------------->
+<div class="page-content1">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+<div class="card">
+<div class="card-body">
+<div class="row">
+<!-----------------------------1--------------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>Volumetric </label>
+<input type="text" class="form-control" disabled>
+</div>
+<div class="form-group">
+<label>Charged KM</label>
+<input type="text" class="form-control" >
+</div>
+<div class="form-group">
+<label>Total Actual Weight</label>
+<input type="text" class="form-control" disabled>
+</div>
+</div>
+<!-------------------------------2------------------------------------>
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>Charge No Of Pkg</label>
+<input type="password" class="form-control" disabled>
+</div>
+<div class="form-group">
+<label>Total Part Qty </label>
+<input type="text" class="form-control" disabled>
+</div>
+<div class="form-group">
+<label>Eway Bill Exempted </label>
+<input type="text" class="form-control" disabled>
+</div>
+</div>
+<!----------------------------------3--------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>Charge Weight</label>
+<input type="password" class="form-control">
+</div>
+<div class="form-group">
+<label>EDD </label>
+<input type="text" class="form-control" >
+</div>
+</div>
+<!----------------------------------4--------------------------------->
+<div class="col-lg-3 col-md-3 col-sm-3 col-6">
+<div class="form-group">
+<label>Total Declared Value</label>
+<input type="password" class="form-control" disabled>
+</div>
+<div class="form-group">
+<label>Total Cubic Weight </label>
+<input type="text" class="form-control">
+</div>
+</div>
+<!------------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-----------------------------------Bill Details---------------------------------->
+<div class="page-content1">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+<div class="card">
+<div class="card-body">
+<div class="row">
+<!-----------------------------1--------------------------------------->
+<div class="col-lg-1 col-md-1 col-sm-1 col-3">
+<form>
+<div class="form-group">
+<label>Sr.No. </label>
+<input type="number" class="form-control" disabled>
+</div>
+</div>
+<!-------------------------------2------------------------------------>
+<div class="col-lg-3 col-md-3 col-sm-3 col-4">
+<div class="form-group">
+<label>EWB Number</label>
+<input type="number" class="form-control">
+</div>
+<div class="form-group">
+<label>Declared Value </label>
+<input type="number" class="form-control">
+</div>
+</div>
+<!----------------------------------3--------------------------------->
+<div class="col-lg-2 col-md-2 col-sm-2 col-4">
+<div class="form-group">
+<label>EWB Date</label>
+<input type="date" class="form-control">
+</div>
+<div class="form-group">
+<label>No of Pkgs </label>
+<input type="number" class="form-control" >
+</div>
+</div>
+<!----------------------------------4--------------------------------->
+<div class="col-lg-2 col-md-2 col-sm-2 col-4">
+<div class="form-group">
+<label>EWB Exp Date</label>
+<input type="date" class="form-control">
+</div>
+<div class="form-group">
+<label>Actual Weight (Kg) </label>
+<input type="number" class="form-control">
+</div>
+</div>
+<!----------------------------------3--------------------------------->
+<div class="col-lg-2 col-md-2 col-sm-2 col-4">
+<div class="form-group">
+<label>Invoice No</label>
+<input type="number" class="form-control">
+</div>
+<div class="form-group">
+<label>HSN Code</label>
+<input type="number" class="form-control">
+</div>
+</div>
+<!----------------------------------3--------------------------------->
+<div class="col-lg-2 col-md-2 col-sm-2 col-4">
+<div class="form-group">
+<label>Invoice Date</label>
+<input type="date" class="form-control">
+</div>
+</div>
+<!------------------------------------------------------------------->
+<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+<div class="form-group text-center">
+<button class="btn btn-primary mr-2" type="submit">Submit</button>
+<button class="btn btn-secondary" type="reset">Cancel</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--------------------------------------------------------------------->
+</div>
+</div>
+
+</div>
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/jquery.slimscroll.js"></script>
+
+<script src="assets/js/select2.min.js"></script>
+<script src="assets/js/moment.min.js"></script>
+
+<script src="assets/plugins/datetimepicker/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
